@@ -1,4 +1,10 @@
 -  request:
+      url: ^/es/api/v1/heartbeat$
+      method: GET
+   response:
+      status: 200
+
+-  request:
       url: ^/es/api/v1/personas$
       method: PUT
       headers:
