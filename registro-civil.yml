@@ -1,0 +1,55 @@
+-  request:
+      url: ^/es/api/v1/personas$
+      method: PUT
+      headers:
+         content-type: application/json
+      body: >
+        {"Nombre":"Janet",
+        "Fecha Nacimiento":"04-01-1980",
+        "Estado Civil": "Soltera"}
+   response:
+      status: 200
+
+-  request:
+      url: ^/es/api/v1/personas/Janet$
+      method: DELETE
+   response:
+      status: 200
+
+-  request:
+      url: ^/es/api/v1/personas
+      method: DELETE
+   response:
+      status: 403
+
+-  request:
+      url: ^/es/api/v1/personas/Janet$
+      method: GET
+   response:
+      status: 200
+      body: >
+        {"Fecha Nacimiento":"04-01-1980","Estado Civil": "Soltera"}
+
+-  request:
+      url: ^/es/api/v1/personas/Janet$
+      method: POST
+      headers:
+         content-type: application/json
+      body: >
+        {"Estado Civil": "Casada"}
+   response:
+      status: 200
+
+-  request:
+      url: ^/es/api/v1/crearbodas$
+      method: PUT
+      headers:
+         content-type: application/json
+      body: >
+        {"Nombre marido":"German",
+        "Nombre mujer":"Janet",
+        "Fecha": "12-03-2015"}
+   response:
+      status: 200
+      body: >
+        {"numero de boda":1}
