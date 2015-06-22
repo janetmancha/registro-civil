@@ -1,5 +1,5 @@
 # Run stubby server
-stubby -d personas.yml
+stubby -d registro-civil.yml
 
 # Request for create person
 curl -v -X PUT -H "content-type: application/json" -d '{"Nombre":"Janet","Fecha Nacimiento":"04-01-1980","Estado Civil": "Soltera"}' 127.0.0.1:8882/es/api/v1/personas

@@ -10,31 +10,40 @@
       headers:
          content-type: application/json
       body: >
-        {"Nombre":"Janet",
+        {
+        "Nombre":"Janet",
         "Fecha Nacimiento":"04-01-1980",
-        "Estado Civil": "Soltera"}
+        "Estado Civil": "Soltera"
+        }
    response:
-      status: 200
+      status: 201
 
 -  request:
       url: ^/es/api/v1/personas/Janet$
       method: DELETE
    response:
       status: 200
-
--  request:
-      url: ^/es/api/v1/personas
-      method: DELETE
-   response:
-      status: 403
 
 -  request:
       url: ^/es/api/v1/personas/Janet$
       method: GET
    response:
       status: 200
+      headers:
+         content-type: application/json
       body: >
         {"Fecha Nacimiento":"04-01-1980","Estado Civil": "Soltera"}
+
+-  request:
+      url: ^/es/api/v1/personas/German$
+      method: GET
+   response:
+      status: 200
+      headers:
+         content-type: application/json
+      body: >
+        {"Fecha Nacimiento":"29-08-1980","Estado Civil": "Soltero"}
+
 
 -  request:
       url: ^/es/api/v1/personas/Janet$
@@ -56,6 +65,6 @@
         "Nombre mujer":"Janet",
         "Fecha": "12-03-2015"}
    response:
-      status: 200
+      status: 201
       body: >
         {"numero de boda":1}
