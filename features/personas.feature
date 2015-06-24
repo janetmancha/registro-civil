@@ -29,6 +29,7 @@ Feature: personas
     When I make GET request to "/es/api/v1/personas/Pepito"
     Then the response should be "404"
 
+  @ignore
   Scenario: modificar datos persona Janet correctamente
     When I make POST request to "/es/api/v1/personas/Janet" with body
     """
@@ -36,6 +37,7 @@ Feature: personas
     """
     Then the response should be "200"
 
+  @my_hook
   Scenario: borrar persona Janet correctamente
     When I make DELETE request to "/es/api/v1/personas/Janet"
     Then the response should be "200"
